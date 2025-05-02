@@ -1,5 +1,7 @@
 # CampusCash - Sistema De Moeda Estudantil
 
+![logotipo 3d empresa de finanças dinheiro moderno minimalista](https://github.com/user-attachments/assets/4034024d-350a-4cc4-8ac6-0798fc91bd35)
+
 Pretende-se desenvolver um sistema para estimular o reconhecimento do mérito  estudantil através de uma moeda virtual. Essa moeda pode ser distribuída por  professores aos seus alunos e trocada pelos alunos por produtos e descontos em  empresas parceiras.
 
 ## Integrantes do Grupo
