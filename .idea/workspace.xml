@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/RequisicaoAluno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Aluno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/repositories/AlunoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/novo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/fragmentos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/RequisicaoAluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/AlunoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/novo.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/novo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/fragmentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/fragmentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -70,6 +73,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/tinoc/OneDrive/Documentos/GitHub/LAB03-SistemaDeMoedaEstudantil",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +122,7 @@
       <workItem from="1746727703892" duration="639000" />
       <workItem from="1746728359735" duration="214000" />
       <workItem from="1746728684105" duration="365000" />
-      <workItem from="1746729144705" duration="4130000" />
+      <workItem from="1746729144705" duration="15808000" />
     </task>
     <servers />
   </component>

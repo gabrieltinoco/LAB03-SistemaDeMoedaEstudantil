@@ -1,10 +1,30 @@
-<div class="container" th:fragment="formulario(requisicaoAluno, action)">
+<div class="container" th:fragment="formulario(requisicao, action)">
     <div class="row">
-        <form th:object="${rrequisicaoAluno" th:action="${action}" method="POST">
+        <form th:object="${requisicao}" th:action="${action}" method="POST">
             <div class="mb-3">
                 <label class="form-label">Nome</label>
                 <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{nome}">
                 <div class="invalid-feedback" th:errors="*{nome}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CPF</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{cpf}">
+                <div class="invalid-feedback" th:errors="*{cpf}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">RG</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{rg}">
+                <div class="invalid-feedback" th:errors="*{rg}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Curso</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{curso}">
+                <div class="invalid-feedback" th:errors="*{curso}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Endereço</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{endereço}">
+                <div class="invalid-feedback" th:errors="*{endereço}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
@@ -20,5 +40,23 @@
             <button type="submit" class="btn btn-primary">Salvar</button>
             <a href="javascript:history.back()">Voltar</a>
         </form>
+    </div>
+</div>
+
+<div th:fragment="delete" class="modal fade" th:id="staticBackdrop+${alunos.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Excluir Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>Deseja excluir o cliente #<span th:text="${alunos.id}"></span>?</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                <a th:href="@{/alunos/{alunoId}/delete(alunoId=${alunos.id})}" class="btn btn-danger">Sim</a>
+            </div>
+        </div>
     </div>
 </div>

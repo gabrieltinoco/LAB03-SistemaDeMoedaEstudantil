@@ -1,11 +1,10 @@
 package com.laboratorio03.campuscash.dto;
 
 import com.laboratorio03.campuscash.models.Aluno;
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-public class RequisicaoAluno {
+public class AlunoDTO {
 
 
     @NotNull

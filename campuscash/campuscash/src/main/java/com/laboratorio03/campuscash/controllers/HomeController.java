@@ -8,10 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class HomeController {
 
-    @GetMapping("/hello")
+    @GetMapping("/home")
     public ModelAndView helloWorld() {
         ModelAndView mv = new ModelAndView("home");
         mv.addObject("message", "Hello World!");
+        mv.addObject("page", "home");
         return mv;
     }
 }
