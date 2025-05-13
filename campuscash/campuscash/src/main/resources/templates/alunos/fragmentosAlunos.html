@@ -1,6 +1,6 @@
-<div class="container" th:fragment="formulario(requisicao, action)">
+<div class="container" th:fragment="formulario(action)">
     <div class="row">
-        <form th:object="${requisicao}" th:action="${action}" method="POST">
+        <form th:object="${alunoDTO}" th:action="${action}" method="POST">
             <div class="mb-3">
                 <label class="form-label">Nome</label>
                 <input class="form-control" th:errorclass="is-invalid" th:field="*{nome}" placeholder="Nome do Aluno">

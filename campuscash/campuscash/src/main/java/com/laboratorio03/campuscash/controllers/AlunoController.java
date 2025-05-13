@@ -35,7 +35,7 @@ public class AlunoController {
     }
 
     @GetMapping("/novo")
-    public ModelAndView novo() {
+    public ModelAndView novo(AlunoDTO requisicao) {
         ModelAndView mv = new ModelAndView("alunos/novo");
         mv.addObject("requisicao", new AlunoDTO()); // <-- linha essencial
         mv.addObject("page", "alunos/novo");
