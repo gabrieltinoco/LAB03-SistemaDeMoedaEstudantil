@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="">
+    <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="Logo redonda e novo endereço da home">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/fragmentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/fragmentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/AlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/AlunoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/novo.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/novo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,11 +121,24 @@
       <workItem from="1746729144705" duration="16143000" />
       <workItem from="1746829799339" duration="178000" />
       <workItem from="1746830601868" duration="1643000" />
-      <workItem from="1746890414783" duration="1125000" />
+      <workItem from="1746890414783" duration="8878000" />
     </task>
+    <task id="LOCAL-00001" summary="Logo redonda e novo endereço da home">
+      <option name="closed" value="true" />
+      <created>1747148434925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747148434925</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Logo redonda e novo endereço da home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logo redonda e novo endereço da home" />
   </component>
 </project>

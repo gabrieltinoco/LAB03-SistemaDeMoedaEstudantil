@@ -1,38 +1,35 @@
 package com.laboratorio03.campuscash.dto;
 
 import com.laboratorio03.campuscash.models.Aluno;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 public class AlunoDTO {
 
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "O nome do aluno é obrigatório.")
     private String nome;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "O CPF é obrigatório.")
+    @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}", message = "O CPF deve estar no formato 000.000.000-00")
     private String cpf;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "O email é obrigatório.")
+    @Email(message = "O email deve ser válido.")
     private String email;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "A senha é obrigatória.")
     private String senha;
 
-    @NotNull
-    @NotBlank
-    private String endereço;
+    @NotBlank(message = "O endereço é obrigatório.")
+    private String endereco;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "O RG é obrigatório.")
     private String rg;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "O curso é obrigatório.")
     private String curso;
 
     public String getNome() {
@@ -67,12 +64,12 @@ public class AlunoDTO {
         this.senha = senha;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getRg() {
@@ -105,7 +102,7 @@ public class AlunoDTO {
         aluno.setCpf(this.cpf);
         aluno.setEmail(this.email);
         aluno.setCurso(this.curso);
-        aluno.setEndereço(this.endereço);
+        aluno.setEndereco(this.endereco);
         aluno.setRg(this.rg);
         aluno.setSenha(this.senha);
         return aluno;
@@ -123,7 +120,7 @@ public class AlunoDTO {
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
-                ", endereço='" + endereço + '\'' +
+                ", endereço='" + endereco + '\'' +
                 ", rg='" + rg + '\'' +
                 ", curso='" + curso + '\'' +
                 '}';

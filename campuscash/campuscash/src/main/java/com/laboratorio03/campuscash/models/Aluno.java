@@ -25,7 +25,7 @@ public class Aluno{
     private String senha;
 
     @Column(nullable = false)
-    private String endereço;
+    private String endereco;
 
     @Column(nullable = false, unique = true)
     private String rg;
@@ -74,11 +74,11 @@ public class Aluno{
     }
 
     public String getEndereço() {
-        return endereço;
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getRg() {

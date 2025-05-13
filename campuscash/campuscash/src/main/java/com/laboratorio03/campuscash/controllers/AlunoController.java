@@ -49,6 +49,7 @@ public class AlunoController {
         if(bindingResult.hasErrors()){
             ModelAndView mv = new ModelAndView("alunos/novo");
             mv.addObject("page", "alunos/novo");
+            mv.addObject("requisicao", requisicao);
             return mv;
         } else {
             Aluno aluno = requisicao.toAluno();
@@ -96,6 +97,7 @@ public class AlunoController {
             ModelAndView mv = new ModelAndView("alunos/edit");
             mv.addObject("alunoId", id);
             mv.addObject("page", "alunos/edit");
+            mv.addObject("requisicao", requisicao); // necessário para mostrar os erros no formulário
             return mv;
         } else {
             Optional<Aluno> optional = this.alunoRepository.findById(id);

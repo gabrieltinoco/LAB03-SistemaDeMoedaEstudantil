@@ -3,47 +3,53 @@
         <form th:object="${requisicao}" th:action="${action}" method="POST">
             <div class="mb-3">
                 <label class="form-label">Nome</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{nome}">
+                <input class="form-control" th:errorclass="is-invalid" th:field="*{nome}" placeholder="Nome do Aluno">
                 <div class="invalid-feedback" th:errors="*{nome}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">CPF</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{cpf}">
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{cpf}"
+                       pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                       placeholder="000.000.000-00">
+
                 <div class="invalid-feedback" th:errors="*{cpf}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">RG</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{rg}">
+                <input class="form-control" th:errorclass="is-invalid" th:field="*{rg}" placeholder=" RG do Aluno">
                 <div class="invalid-feedback" th:errors="*{rg}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Curso</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{curso}">
+                <input class="form-control" th:errorclass="is-invalid" th:field="*{curso}" placeholder="Curso do Aluno">
                 <div class="invalid-feedback" th:errors="*{curso}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Endereço</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{endereço}">
-                <div class="invalid-feedback" th:errors="*{endereço}"></div>
+                <input class="form-control" th:errorclass="is-invalid" th:field="*{endereco}" placeholder="Endereço residencial do Aluno">
+                <div class="invalid-feedback" th:errors="*{endereco}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{email}">
+                <input type="email" class="form-control" th:errorclass="is-invalid" th:field="*{email}"
+                       placeholder="Email principal do Aluno">
                 <div class="invalid-feedback" th:errors="*{email}"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Senha</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{senha}">
+                <input type="password" class="form-control" th:errorclass="is-invalid" th:field="*{senha}"
+                       placeholder="Senha do Aluno">
                 <div class="invalid-feedback" th:errors="*{senha}"></div>
             </div>
 
             <button type="submit" class="btn btn-primary">Salvar</button>
-            <a href="javascript:history.back()">Voltar</a>
+            <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
         </form>
     </div>
 </div>
 
-<div th:fragment="delete" class="modal fade" th:id="staticBackdrop+${alunos.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div th:fragment="delete" class="modal fade" th:id="${'staticBackdrop' + alunos.id}" data-bs-backdrop="static"
+     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
