@@ -109,7 +109,13 @@ public class AlunoDTO {
 
 
     public void fromAluno(Aluno aluno){
-        getAluno(aluno);
+        this.nome = aluno.getNome();
+        this.cpf = aluno.getCpf();
+        this.email = aluno.getEmail();
+        this.curso = aluno.getCurso();
+        this.endereco = aluno.getEndereco();
+        this.rg = aluno.getRg();
+        this.senha = aluno.getSenha();
     }
 
     @Override

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="Logo redonda e novo endereço da home">
-      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/controllers/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/AlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/dto/AlunoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/java/com/laboratorio03/campuscash/models/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/fragmentosAlunos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +121,7 @@
       <workItem from="1746729144705" duration="16143000" />
       <workItem from="1746829799339" duration="178000" />
       <workItem from="1746830601868" duration="1643000" />
-      <workItem from="1746890414783" duration="9192000" />
+      <workItem from="1746890414783" duration="10988000" />
     </task>
     <task id="LOCAL-00001" summary="Logo redonda e novo endereço da home">
       <option name="closed" value="true" />

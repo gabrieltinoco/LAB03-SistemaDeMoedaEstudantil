@@ -73,7 +73,7 @@ public class Aluno{
         this.senha = senha;
     }
 
-    public String getEndereço() {
+    public String getEndereco() {
         return endereco;
     }
 
