@@ -9,8 +9,8 @@
 <header th:fragment="header(titulo)">
     <div class="bg-white shadow-sm py-3">
         <div class="container d-flex flex-wrap align-items-center justify-content-between">
-            <a href="/home" class="d-flex align-items-center text-decoration-none">
-                <img src="/imagens/logo.png" alt="Logo" class="me-3" style="height: 80px;" th:src="@{/imagens/logo.png}">
+            <a href="/" class="d-flex align-items-center text-decoration-none">
+                <img src="/imagens/logoredonda.png" alt="Logo" class="me-3" style="height: 80px;" th:src="@{/imagens/logoredonda.png}">
                 <span class="fs-1 fw-bold text-primary">CampusCash</span>
             </a>
             <!-- Botão de login -->
@@ -27,7 +27,7 @@
                 <li class="nav-item">
                     <a class="nav-link"
                        th:classappend="${page == 'home'} ? ' active' : ''"
-                       href="/home">Home</a>
+                       href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"
