@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Detalhes de Alunos')}"></head>
+
+<body>
+
+<header th:replace="~{fragmentos :: header('')}"></header>
+
+<main class="container mt-5">
+    <section>
+        <h2 class="mb-4 text-primary">Dados do Aluno #<span th:text="${alunos.id}">Id</span>: <span th:text="${alunos.nome}">Nome do Aluno</span></h2>
+
+        <div class="mb-3">
+            <strong>Nome:</strong> <span th:text="${alunos.nome}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>CPF:</strong> <span th:text="${alunos.cpf}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>Email:</strong> <span th:text="${alunos.email}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>Senha:</strong> <span th:text="${alunos.senha}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>Endereço:</strong> <span th:text="${alunos.endereco}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>RG:</strong> <span th:text="${alunos.rg}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>Curso:</strong> <span th:text="${alunos.curso}"></span>
+        </div>
+
+        <div class="mt-4 d-flex gap-2">
+            <a class="btn btn-primary" th:href="@{/alunos/{alunoId}/edit(alunoId = ${alunos.id})}">Editar</a>
+            <a class="btn btn-secondary" href="/alunos">Voltar</a>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
