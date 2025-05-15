@@ -5,19 +5,24 @@
 
 
 <body>
-<header th:replace="~{fragmentos :: header('CampusCash')}"></header>
+<header th:replace="~{fragmentos :: header('Login de Usuário')}"></header>
 
-<form th:action="@{/login}" method="post">
-    <div class="mb-3">
-        <label>Email</label>
-        <input type="email" name="email" class="form-control" required>
+<main>
+    <div class="container mt-4">
+        <form th:action="@{/login}" method="post">
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Senha</label>
+                <input type="password" name="senha" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
     </div>
-    <div class="mb-3">
-        <label>Senha</label>
-        <input type="password" name="senha" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+</main>
+
 
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
