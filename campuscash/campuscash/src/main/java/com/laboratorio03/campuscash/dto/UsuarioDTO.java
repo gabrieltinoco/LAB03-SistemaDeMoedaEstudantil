@@ -11,7 +11,6 @@ public class UsuarioDTO {
     protected String email;
 
     @NotBlank(message = "A senha é obrigatória.")
-    @NotBlank
     protected String senha;
 
     public String getEmail() {
