@@ -1,11 +1,10 @@
 package com.laboratorio03.campuscash.dto;
 
 import com.laboratorio03.campuscash.models.Aluno;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public class AlunoDTO {
+public class AlunoDTO extends UsuarioDTO {
 
 
     @NotBlank(message = "O nome do aluno é obrigatório.")
@@ -14,13 +13,6 @@ public class AlunoDTO {
     @NotBlank(message = "O CPF é obrigatório.")
     @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}", message = "O CPF deve estar no formato 000.000.000-00")
     private String cpf;
-
-    @NotBlank(message = "O email é obrigatório.")
-    @Email(message = "O email deve ser válido.")
-    private String email;
-
-    @NotBlank(message = "A senha é obrigatória.")
-    private String senha;
 
     @NotBlank(message = "O endereço é obrigatório.")
     private String endereco;
@@ -45,22 +37,6 @@ public class AlunoDTO {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public String getEndereco() {

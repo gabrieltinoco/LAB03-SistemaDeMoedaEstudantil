@@ -2,27 +2,15 @@ package com.laboratorio03.campuscash.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 
 @Entity
-public class Aluno{
-
-    @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+public class Aluno extends Usuario{
 
     @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false, unique = true)
     private String cpf;
-
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String senha;
 
     @Column(nullable = false)
     private String endereco;
@@ -33,12 +21,8 @@ public class Aluno{
     @Column(nullable = false)
     private String curso;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public Aluno() {
+        this.tipoUsuario = TipoUsuario.ALUNO; // Define o tipo automaticamente
     }
 
     public String getNome() {
@@ -55,22 +39,6 @@ public class Aluno{
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public String getEndereco() {
