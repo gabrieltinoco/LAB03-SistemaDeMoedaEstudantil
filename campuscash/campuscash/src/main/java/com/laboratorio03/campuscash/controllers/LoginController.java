@@ -30,4 +30,10 @@ public class LoginController {
 
         return loginService.login(email, senha, session);
     }
+
+    @GetMapping("/logout")
+    public ModelAndView logout(HttpSession session) {
+        session.invalidate();
+        return new ModelAndView("redirect:/login");
+    }
 }
