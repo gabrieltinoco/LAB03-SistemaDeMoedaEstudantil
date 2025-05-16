@@ -29,7 +29,7 @@ public class EmpresaService {
         return mv;
     }
 
-    public ModelAndView novaEmpresa(EmpresaDTO requisicao) {
+    public ModelAndView novaEmpresa() {
         ModelAndView mv = new ModelAndView("empresas/novo");
         mv.addObject("requisicao", new EmpresaDTO());
         mv.addObject("page", "empresas/novo");

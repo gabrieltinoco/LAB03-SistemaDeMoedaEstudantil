@@ -29,7 +29,7 @@ public class AlunoService {
         return mv;
     }
 
-    public ModelAndView novoAluno(AlunoDTO requisicao) {
+    public ModelAndView novoAluno() {
         ModelAndView mv = new ModelAndView("alunos/novo");
         mv.addObject("requisicao", new AlunoDTO());
         mv.addObject("page", "alunos/novo");

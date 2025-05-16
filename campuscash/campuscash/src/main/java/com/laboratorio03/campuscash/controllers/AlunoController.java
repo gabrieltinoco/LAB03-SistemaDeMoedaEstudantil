@@ -29,9 +29,8 @@ public class AlunoController {
     }
 
     @GetMapping("/novo")
-    public ModelAndView novo(AlunoDTO requisicao) {
-
-        return alunoService.novoAluno(requisicao);
+    public ModelAndView novo() {
+        return alunoService.novoAluno();
     }
 
 

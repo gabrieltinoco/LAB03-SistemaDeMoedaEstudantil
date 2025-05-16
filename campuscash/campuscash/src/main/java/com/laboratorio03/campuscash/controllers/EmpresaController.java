@@ -26,8 +26,8 @@ public class EmpresaController {
     }
 
     @GetMapping("/novo")
-    public ModelAndView novo(EmpresaDTO requisicao) {
-        return empresaService.novaEmpresa(requisicao);
+    public ModelAndView novo() {
+        return empresaService.novaEmpresa();
     }
 
     @PostMapping("")
