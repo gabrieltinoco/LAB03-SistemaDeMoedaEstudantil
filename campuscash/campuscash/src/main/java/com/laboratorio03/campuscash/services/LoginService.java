@@ -22,26 +22,27 @@ public class LoginService {
         return mv;
     }
 
-    public ModelAndView login(@RequestParam String email, @RequestParam String senha, HttpSession session) {
+    public ModelAndView login(String email, String senha, HttpSession session) {
         Optional<Usuario> optionalUsuario = usuarioRepository.findByEmail(email);
 
         if (optionalUsuario.isPresent()) {
             Usuario usuario = optionalUsuario.get();
+
             if (usuario.getSenha().equals(senha)) {
                 session.setAttribute("usuarioLogado", usuario);
 
-                // Redirecionar conforme tipo
-                switch (usuario.getTipoUsuario()) {
-                    case ALUNO:
-                        return new ModelAndView("redirect:/alunos/" + usuario.getId());
-                    case EMPRESA:
-                        return new ModelAndView("redirect:/empresa/dashboard");
-                }
+                String redirectUrl = switch (usuario.getTipoUsuario()) {
+                    case ALUNO -> "/alunos/" + usuario.getId();
+                    case EMPRESA -> "/empresa/dashboard";
+                    default -> "/";
+                };
+
+                // Redireciona com mensagem de sucesso
+                return new ModelAndView("redirect:" + redirectUrl + "?mensagem=Login+realizado+com+sucesso&erro=false");
             }
         }
 
-        ModelAndView mv = new ModelAndView("login");
-        mv.addObject("erro", "Email ou senha inválidos.");
-        return mv;
+        // Redireciona com mensagem de erro
+        return new ModelAndView("redirect:/login?mensagem=Email+ou+senha+inválidos&erro=true");
     }
 }

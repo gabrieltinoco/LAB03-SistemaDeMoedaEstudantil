@@ -9,6 +9,15 @@
 
 <main>
     <div class="container mt-4">
+        <div class="col-12">
+        <span id="mensagem-alerta"
+              th:styleappend="${(param.erro == null || param.mensagem == null) ? 'display: none;' : ''}"
+              th:classappend="${(param.erro != null && param.erro) ? 'error-message' : 'success-message'}"
+              th:text="${param.mensagem != null ? param.mensagem : ''}">
+            Uma mensagem bem legal!
+        </span>
+        </div>
+
         <form th:action="@{/login}" method="post">
             <div class="mb-3">
                 <label>Email</label>
@@ -23,7 +32,16 @@
     </div>
 </main>
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const alerta = document.getElementById("mensagem-alerta");
+        if (alerta && alerta.textContent.trim() !== "") {
+            setTimeout(() => {
+                alerta.style.display = "none";
+            }, 2000); // some após 2 segundos
+        }
+    });
+</script>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

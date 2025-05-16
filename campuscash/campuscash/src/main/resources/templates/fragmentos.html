@@ -44,3 +44,27 @@
         <h1 class="display-6" th:text="${titulo}">Bem-vindo!</h1>
     </div>
 </header>
+
+<div th:fragment="alerta">
+    <div class="container mb-4">
+        <div class="col-12">
+        <span id="mensagem-alerta"
+              th:styleappend="${(param.erro == null || param.mensagem == null) ? 'display: none;' : ''}"
+              th:classappend="${(param.erro != null && param.erro) ? 'error-message' : 'success-message'}"
+              th:text="${param.mensagem != null ? param.mensagem : ''}">
+            Uma mensagem bem legal!
+        </span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const alerta = document.getElementById("mensagem-alerta");
+            if (alerta && alerta.textContent.trim() !== "") {
+                setTimeout(() => {
+                    alerta.style.display = "none";
+                }, 2000); // some após 2 segundos
+            }
+        });
+    </script>
+</div>

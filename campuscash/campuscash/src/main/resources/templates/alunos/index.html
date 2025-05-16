@@ -7,16 +7,8 @@
 
 <body>
 
-<div class="container mb-4">
-    <div class="col-12">
-        <span id="mensagem-alerta"
-              th:styleappend="${(param.erro == null || param.mensagem == null) ? 'display: none;' : ''}"
-              th:classappend="${(param.erro != null && param.erro) ? 'error-message' : 'success-message'}"
-              th:text="${param.mensagem != null ? param.mensagem : ''}">
-            Uma mensagem bem legal!
-        </span>
-    </div>
-</div>
+<div th:replace="~{fragmentos :: alerta}"></div>
+
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <a href="/alunos/novo" class="btn btn-success">+ Novo Aluno</a>
@@ -67,15 +59,6 @@
             integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
             crossorigin="anonymous"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const alerta = document.getElementById("mensagem-alerta");
-            if (alerta && alerta.textContent.trim() !== "") {
-                setTimeout(() => {
-                    alerta.style.display = "none";
-                }, 2000); // some após 2 segundos
-            }
-        });
-    </script>
+</div>
 </body>
 </html>
