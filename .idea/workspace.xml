@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="Logo redonda e novo endereço da home">
+    <list default="true" id="4796e4d8-f406-4e30-abbb-5202a8e17aba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/campuscash/campuscash/src/main/resources/templates/alunos/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +15,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="CSS File" />
+        <option value="Enum" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -119,7 +118,9 @@
       <workItem from="1746729144705" duration="16143000" />
       <workItem from="1746829799339" duration="178000" />
       <workItem from="1746830601868" duration="1643000" />
-      <workItem from="1746890414783" duration="13311000" />
+      <workItem from="1746890414783" duration="14651000" />
+      <workItem from="1747172145595" duration="18000" />
+      <workItem from="1747330787722" duration="5831000" />
     </task>
     <task id="LOCAL-00001" summary="Logo redonda e novo endereço da home">
       <option name="closed" value="true" />
