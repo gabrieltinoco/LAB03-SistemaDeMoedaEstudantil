@@ -31,9 +31,9 @@
                     <tbody>
                     <tr th:each="empresas : ${empresas}">
                         <td class="col-1" th:text="${empresas.id}">1</td>
-                        <td class="col-3" th:text="${empresas.nome}">Nome do Aluno</td>
-                        <td class="col-3" th:text="${empresas.cnpj}">cpf</td>
-                        <td class="col-2" th:text="${empresas.email}">email@email.com</td>
+                        <td class="col-4" th:text="${empresas.nome}">Nome do Aluno</td>
+                        <td class="col-4" th:text="${empresas.cnpj}">cpf</td>
+                        <td class="col-3" th:text="${empresas.email}">email@email.com</td>
                         <td class="col-1">
                             <a th:href="@{/empresas/{empresaId}(empresaId = ${empresas.id})}" class="btn btn-info btn-sm">Detalhes</a>
                         </td>

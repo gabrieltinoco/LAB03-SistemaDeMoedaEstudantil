@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AlunoController {
 
     @Autowired
-    AlunoService alunoService;
+    private AlunoService alunoService;
 
     @GetMapping("")
     public ModelAndView index () {
