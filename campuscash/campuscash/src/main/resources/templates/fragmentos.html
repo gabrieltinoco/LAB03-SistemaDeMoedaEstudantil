@@ -15,7 +15,8 @@
             </a>
             <!-- Botão de login -->
             <div class="text-end">
-                <a class="btn btn-outline-primary" href="/login">Login</a>
+                <a class="btn btn-outline-primary" th:if="${session.usuarioLogado != null}" th:href="@{/logout}">Logout</a>
+                <a class="btn btn-outline-primary" th:if="${session.usuarioLogado == null}" th:href="@{/login}">Login</a>
             </div>
         </div>
     </div>
