@@ -43,6 +43,6 @@ public class LoginService {
         }
 
         // Redireciona com mensagem de erro
-        return new ModelAndView("redirect:/login?mensagem=Email+ou+senha+inválidos&erro=true");
+        return new ModelAndView("redirect:/login?mensagem=Email+ou+senha+incorretos&erro=true");
     }
 }
