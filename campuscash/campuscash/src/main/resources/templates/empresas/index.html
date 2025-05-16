@@ -41,11 +41,11 @@
                             <a th:href="@{/empresas/{empresaId}/edit(empresaId = ${empresas.id})}"
                                class="btn btn-warning btn-sm">Editar</a>
                         </td>
-<!--                        <td class="col-1">-->
-<!--                            <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal"-->
-<!--                               th:attr="data-bs-target='#staticBackdrop'+${alunos.id}">Deletar</a>-->
-<!--                            <div th:replace="~{alunos/fragmentosAlunos :: delete}"></div>-->
-<!--                        </td>-->
+                        <td class="col-1">
+                            <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                               th:attr="data-bs-target='#staticBackdrop'+${empresas.id}">Deletar</a>
+                            <div th:replace="~{empresas/fragmentosEmpresas :: delete}"></div>
+                        </td>
 
                     </tr>
                     </tbody>
