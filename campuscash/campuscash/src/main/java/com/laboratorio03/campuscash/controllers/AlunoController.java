@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AlunoController {
 
     @Autowired
-    AlunoService alunoService;
+    private AlunoService alunoService;
 
     @GetMapping("")
     public ModelAndView index () {
@@ -29,9 +29,8 @@ public class AlunoController {
     }
 
     @GetMapping("/novo")
-    public ModelAndView novo(AlunoDTO requisicao) {
-
-        return alunoService.novoAluno(requisicao);
+    public ModelAndView novo() {
+        return alunoService.novoAluno();
     }
 
 

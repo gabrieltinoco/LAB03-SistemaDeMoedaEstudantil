@@ -1,25 +1,22 @@
-.error-message {
+.error-message,
+.success-message {
     color: #fff;
-    background-color: #e74c3c;
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
-    animation: fadeOut 0.5s ease-out 3s forwards;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.error-message {
+    background-color: #e74c3c;
 }
 
 .success-message {
-    color: #fff;
     background-color: #2ecc71;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    animation: fadeOut 0.5s ease-out 3s forwards;
 }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        transform: translateY(-10px);
-        display: none;
-    }
+.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
 }
