@@ -33,7 +33,7 @@ public class LoginService {
 
                 String redirectUrl = switch (usuario.getTipoUsuario()) {
                     case ALUNO -> "/alunos/" + usuario.getId();
-                    case EMPRESA -> "/empresa/dashboard";
+                    case EMPRESA -> "/empresas/";
                     default -> "/";
                 };
 
