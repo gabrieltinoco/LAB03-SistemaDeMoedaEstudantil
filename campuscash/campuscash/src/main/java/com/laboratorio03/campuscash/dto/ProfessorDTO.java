@@ -19,6 +19,8 @@ public class ProfessorDTO extends UsuarioDTO {
     @NotNull(message = "A instituição é obrigatória.")
     private Long instituicaoId;
 
+    private int saldoMoedas;
+
     private String nomeInstituicao;
 
     public String getNome() {
@@ -43,6 +45,14 @@ public class ProfessorDTO extends UsuarioDTO {
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
+    }
+
+    public int getSaldoMoedas() {
+        return saldoMoedas;
+    }
+
+    public void setSaldoMoedas(int saldoMoedas) {
+        this.saldoMoedas = saldoMoedas;
     }
 
     public Long getInstituicaoId() {
@@ -76,6 +86,7 @@ public class ProfessorDTO extends UsuarioDTO {
         professor.setDepartamento(this.departamento);
         professor.setEmail(this.email);
         professor.setSenha(this.senha);
+        professor.setSaldoMoedas(this.saldoMoedas);
         professor.setInstituicao(new Instituicao(this.instituicaoId));
         return professor;
     }
@@ -86,6 +97,7 @@ public class ProfessorDTO extends UsuarioDTO {
         this.departamento = professor.getDepartamento();
         this.email = professor.getEmail();
         this.senha = professor.getSenha();
+        this.saldoMoedas = professor.getSaldoMoedas();
         this.instituicaoId = professor.getInstituicao() != null ? professor.getInstituicao().getId() : null;
         this.nomeInstituicao = professor.getInstituicao() != null ? professor.getInstituicao().getNome() : null;
     }

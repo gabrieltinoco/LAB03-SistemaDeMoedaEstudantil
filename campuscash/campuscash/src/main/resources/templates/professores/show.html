@@ -29,6 +29,13 @@
         <div class="mb-3">
             <strong>Departamento:</strong> <span th:text="${professores.departamento}"></span>
         </div>
+        <div class="mb-3">
+            <strong>Instituição:</strong>
+            <span th:text="${professores.instituicao != null ? professores.instituicao.nome : 'Não informada'}"></span>
+        </div>
+        <div class="mb-3">
+            <strong>Moedas Disponivéis:</strong> <span th:text="${professores.saldoMoedas}"></span>
+        </div>
         <div class="mt-4 d-flex gap-2">
             <a class="btn btn-primary" th:href="@{/professores/{professorId}/edit(professorId = ${professores.id})}">Editar</a>
             <a class="btn btn-secondary" href="/professores">Voltar</a>

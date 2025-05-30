@@ -40,6 +40,19 @@
                 <div class="invalid-feedback" th:errors="*{senha}"></div>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label">Instituição</label>
+                <select class="form-select" th:field="*{instituicaoId}" th:errorclass="is-invalid">
+                    <option value="" disabled selected>Selecione uma instituição</option>
+                    <option th:each="instituicao : ${instituicoes}"
+                            th:value="${instituicao.id}"
+                            th:text="${instituicao.nome}">
+                    </option>
+                </select>
+                <div class="invalid-feedback" th:errors="*{instituicaoId}"></div>
+            </div>
+
+
             <button type="submit" class="btn btn-primary">Salvar</button>
             <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
         </form>

@@ -3,6 +3,7 @@ package com.laboratorio03.campuscash.services;
 import com.laboratorio03.campuscash.dto.AlunoDTO;
 import com.laboratorio03.campuscash.models.Aluno;
 import com.laboratorio03.campuscash.repositories.AlunoRepository;
+import com.laboratorio03.campuscash.repositories.InstituicaoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -20,6 +21,9 @@ public class AlunoService {
     @Autowired
     private AlunoRepository alunoRepository;
 
+    @Autowired
+    private InstituicaoRepository instituicaoRepository;
+
     public ModelAndView paginaAlunos() {
 
         List<Aluno> alunos = this.alunoRepository.findAll();
@@ -33,6 +37,7 @@ public class AlunoService {
         ModelAndView mv = new ModelAndView("alunos/novo");
         mv.addObject("alunoDTO", new AlunoDTO());
         mv.addObject("page", "alunos/novo");
+        mv.addObject("instituicoes", instituicaoRepository.findAll());
         return mv;
     }
 
@@ -41,6 +46,7 @@ public class AlunoService {
             ModelAndView mv = new ModelAndView("alunos/novo");
             mv.addObject("page", "alunos/novo");
             mv.addObject("alunoDTO", alunoDTO);
+            mv.addObject("instituicoes", instituicaoRepository.findAll());
             return mv;
         } else {
             Aluno aluno = alunoDTO.toAluno();
@@ -73,6 +79,7 @@ public class AlunoService {
             mv.addObject("page","alunos/edit");
             mv.addObject("requisicao", requisicao);
             mv.addObject("alunoId", aluno.getId());
+            mv.addObject("instituicoes", instituicaoRepository.findAll());
             return mv;
         } else {
             return this.retornaErroAlunos("Não foi possivel encontrar o aluno #" + id +"!");
@@ -85,6 +92,7 @@ public class AlunoService {
             mv.addObject("alunoId", id);
             mv.addObject("page", "alunos/edit");
             mv.addObject("requisicao", requisicao); // necessário para mostrar os erros no formulário
+            mv.addObject("instituicoes", instituicaoRepository.findAll());
             return mv;
         } else {
             Optional<Aluno> optional = this.alunoRepository.findById(id);
