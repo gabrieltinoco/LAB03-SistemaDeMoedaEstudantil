@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Aluno extends Usuario{
+public class Professor extends Usuario {
 
     @Column(nullable = false)
     private String nome;
@@ -14,19 +14,15 @@ public class Aluno extends Usuario{
     private String cpf;
 
     @Column(nullable = false)
-    private String endereco;
-
-    @Column(nullable = false, unique = true)
-    private String rg;
-
-    @Column(nullable = false)
-    private String curso;
+    private String departamento;
 
     @ManyToOne
     private Instituicao instituicao;
 
-    public Aluno() {
-        this.tipoUsuario = TipoUsuario.ALUNO; // Define o tipo automaticamente
+    private int saldoMoedas = 1000;
+
+    public Professor() {
+        this.tipoUsuario = TipoUsuario.PROFESSOR;
     }
 
     public String getNome() {
@@ -45,27 +41,27 @@ public class Aluno extends Usuario{
         this.cpf = cpf;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
-    public String getRg() {
-        return rg;
+    public Instituicao getInstituicao() {
+        return instituicao;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setInstituicao(Instituicao instituicao) {
+        this.instituicao = instituicao;
     }
 
-    public String getCurso() {
-        return curso;
+    public int getSaldoMoedas() {
+        return saldoMoedas;
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
+    public void setSaldoMoedas(int saldoMoedas) {
+        this.saldoMoedas = saldoMoedas;
     }
 }
