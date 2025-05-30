@@ -31,6 +31,14 @@ public class Aluno extends Usuario{
         this.tipoUsuario = TipoUsuario.ALUNO; // Define o tipo automaticamente
     }
 
+    public Instituicao getInstituicao() {
+        return instituicao;
+    }
+
+    public void setInstituicao(Instituicao instituicao) {
+        this.instituicao = instituicao;
+    }
+
     public String getNome() {
         return nome;
     }

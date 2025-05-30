@@ -15,6 +15,10 @@ public class Instituicao {
     public Instituicao() {
     }
 
+    public Instituicao(Long id) {
+        this.id = id;
+    }
+
     public long getId() {
         return id;
     }

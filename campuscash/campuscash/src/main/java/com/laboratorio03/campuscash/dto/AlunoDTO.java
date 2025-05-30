@@ -1,7 +1,9 @@
 package com.laboratorio03.campuscash.dto;
 
 import com.laboratorio03.campuscash.models.Aluno;
+import com.laboratorio03.campuscash.models.Instituicao;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public class AlunoDTO extends UsuarioDTO {
@@ -22,6 +24,11 @@ public class AlunoDTO extends UsuarioDTO {
 
     @NotBlank(message = "O curso é obrigatório.")
     private String curso;
+
+    @NotNull(message = "A instituição é obrigatória.")
+    private Long instituicaoId;
+
+    private String nomeInstituicao;
 
     public String getNome() {
         return nome;
@@ -63,6 +70,22 @@ public class AlunoDTO extends UsuarioDTO {
         this.curso = curso;
     }
 
+    public Long getInstituicaoId() {
+        return instituicaoId;
+    }
+
+    public void setInstituicaoId(Long instituicaoId) {
+        this.instituicaoId = instituicaoId;
+    }
+
+    public String getNomeInstituicao() {
+        return nomeInstituicao;
+    }
+
+    public void setNomeInstituicao(String nomeInstituicao) {
+        this.nomeInstituicao = nomeInstituicao;
+    }
+
     public Aluno toAluno(){
         Aluno aluno = new Aluno();
         return getAluno(aluno);
@@ -80,6 +103,7 @@ public class AlunoDTO extends UsuarioDTO {
         aluno.setEndereco(this.endereco);
         aluno.setRg(this.rg);
         aluno.setSenha(this.senha);
+        aluno.setInstituicao(new Instituicao(this.instituicaoId));
         return aluno;
     }
 
@@ -92,6 +116,8 @@ public class AlunoDTO extends UsuarioDTO {
         this.endereco = aluno.getEndereco();
         this.rg = aluno.getRg();
         this.senha = aluno.getSenha();
+        this.instituicaoId = aluno.getInstituicao() != null ? aluno.getInstituicao().getId() : null;
+        this.nomeInstituicao = aluno.getInstituicao() != null ? aluno.getInstituicao().getNome() : null;
     }
 
     @Override
