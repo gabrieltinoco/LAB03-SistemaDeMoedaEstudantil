@@ -67,12 +67,12 @@ public class EmpresaService {
         Optional<Empresa> optional = this.empresaRepository.findById(id);
 
         if (optional.isPresent()){
-            Empresa empresas = optional.get();
-            requisicao.fromEmpresa(empresas);
+            Empresa empresa = optional.get();
+            requisicao.fromEmpresa(empresa);
             ModelAndView mv = new ModelAndView("empresas/edit");
             mv.addObject("page","empresas/edit");
             mv.addObject("requisicao", requisicao);
-            mv.addObject("empresaId", empresas.getId());
+            mv.addObject("empresaId", empresa.getId());
             return mv;
         } else {
             return this.retornaErroEmpresa("Não foi possivel encontrar a empresa #" + id +"!");
