@@ -2,6 +2,7 @@ package com.laboratorio03.campuscash.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -23,6 +24,7 @@ public class Aluno extends Usuario{
     private String curso;
 
     @ManyToOne
+    @JoinColumn(name = "instituicao_id")
     private Instituicao instituicao;
 
     public Aluno() {
