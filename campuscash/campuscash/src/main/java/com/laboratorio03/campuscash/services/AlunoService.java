@@ -31,19 +31,19 @@ public class AlunoService {
 
     public ModelAndView novoAluno() {
         ModelAndView mv = new ModelAndView("alunos/novo");
-        mv.addObject("requisicao", new AlunoDTO());
+        mv.addObject("alunoDTO", new AlunoDTO());
         mv.addObject("page", "alunos/novo");
         return mv;
     }
 
-    public ModelAndView criarnovoAluno(@Valid AlunoDTO requisicao, BindingResult bindingResult){
+    public ModelAndView criarnovoAluno(@Valid AlunoDTO alunoDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             ModelAndView mv = new ModelAndView("alunos/novo");
             mv.addObject("page", "alunos/novo");
-            mv.addObject("requisicao", requisicao);
+            mv.addObject("alunoDTO", alunoDTO);
             return mv;
         } else {
-            Aluno aluno = requisicao.toAluno();
+            Aluno aluno = alunoDTO.toAluno();
             this.alunoRepository.save(aluno);
             return new ModelAndView("redirect:/alunos");
         }

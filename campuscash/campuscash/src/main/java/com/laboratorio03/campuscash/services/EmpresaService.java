@@ -31,19 +31,19 @@ public class EmpresaService {
 
     public ModelAndView novaEmpresa() {
         ModelAndView mv = new ModelAndView("empresas/novo");
-        mv.addObject("requisicao", new EmpresaDTO());
+        mv.addObject("empresaDTO", new EmpresaDTO());
         mv.addObject("page", "empresas/novo");
         return mv;
     }
 
-    public ModelAndView criarnovaEmpresa(@Valid EmpresaDTO requisicao, BindingResult bindingResult){
+    public ModelAndView criarnovaEmpresa(@Valid EmpresaDTO empresaDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             ModelAndView mv = new ModelAndView("empresas/novo");
             mv.addObject("page", "empresas/novo");
-            mv.addObject("requisicao", requisicao);
+            mv.addObject("empresaDTO", empresaDTO);
             return mv;
         } else {
-            Empresa empresa = requisicao.toEmpresa();
+            Empresa empresa = empresaDTO.toEmpresa();
             this.empresaRepository.save(empresa);
             return new ModelAndView("redirect:/empresas");
         }

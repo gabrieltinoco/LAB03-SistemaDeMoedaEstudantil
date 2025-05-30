@@ -1,3 +1,39 @@
+<div class="container" th:fragment="formulario(action)">
+    <div class="row">
+        <form th:object="${empresaDTO}" th:action="${action}" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" th:errorclass="is-invalid" th:field="*{nome}">
+                <div class="invalid-feedback" th:errors="*{nome}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CNPJ</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{cnpj}"
+                       pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}"
+                       placeholder="00.000.000/0000-00">
+
+                <div class="invalid-feedback" th:errors="*{cnpj}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" th:errorclass="is-invalid" th:field="*{email}">
+                <div class="invalid-feedback" th:errors="*{email}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Senha</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{senha}">
+                <div class="invalid-feedback" th:errors="*{senha}"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+</div>
+
+
+
+
 <div th:fragment="delete" class="modal fade" th:id="${'staticBackdrop' + empresas.id}" data-bs-backdrop="static"
      data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
