@@ -71,16 +71,16 @@ public class ProfessorDTO extends UsuarioDTO {
         this.nomeInstituicao = nomeInstituicao;
     }
 
-    private Professor toProfessor() {
+    public Professor toProfessor() {
         Professor professor = new Professor();
         return getProfessor(professor);
     }
 
-    private Professor toProfessor(Professor professor) {
+    public Professor toProfessor(Professor professor) {
         return getProfessor(professor);
     }
 
-    private Professor getProfessor(Professor professor){
+    public Professor getProfessor(Professor professor){
         professor.setNome(this.nome);
         professor.setCpf(this.cpf);
         professor.setDepartamento(this.departamento);
@@ -91,7 +91,7 @@ public class ProfessorDTO extends UsuarioDTO {
         return professor;
     }
 
-    private void fromProfessor(Professor professor) {
+    public void fromProfessor(Professor professor) {
         this.nome = professor.getNome();
         this.cpf = professor.getCpf();
         this.departamento = professor.getDepartamento();

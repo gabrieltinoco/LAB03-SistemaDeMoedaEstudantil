@@ -1,3 +1,58 @@
+<div class="container" th:fragment="formulario(action)">
+  <div class="row">
+    <form th:object="${professorDTO}" th:action="${action}" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input class="form-control" th:errorclass="is-invalid" th:field="*{nome}">
+        <div class="invalid-feedback" th:errors="*{nome}"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">CPF</label>
+        <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{cpf}"
+               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+               placeholder="000.000.000-00">
+        <div class="invalid-feedback" th:errors="*{cpf}"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Departamento</label>
+        <input class="form-control" th:errorclass="is-invalid" th:field="*{departamento}">
+        <div class="invalid-feedback" th:errors="*{departamento}"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Moedas Disponiveis</label>
+        <input class="form-control" th:errorclass="is-invalid" th:field="*{saldoMoedas}">
+        <div class="invalid-feedback" th:errors="*{saldoMoedas}"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" th:errorclass="is-invalid" th:field="*{email}">
+        <div class="invalid-feedback" th:errors="*{email}"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Senha</label>
+        <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{senha}">
+        <div class="invalid-feedback" th:errors="*{senha}"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Instituição</label>
+        <select class="form-select" th:field="*{instituicaoId}" th:errorclass="is-invalid">
+          <option value="" disabled selected>Selecione uma instituição</option>
+          <option th:each="instituicao : ${instituicoes}"
+                  th:value="${instituicao.id}"
+                  th:text="${instituicao.nome}">
+          </option>
+        </select>
+        <div class="invalid-feedback" th:errors="*{instituicaoId}"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+    </form>
+  </div>
+</div>
+
+
 <div th:fragment="delete" class="modal fade" th:id="${'staticBackdrop' + professores.id}" data-bs-backdrop="static"
      data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
